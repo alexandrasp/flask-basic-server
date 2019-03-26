@@ -6,7 +6,7 @@ app = Flask(__name__)
 #tokenize
 @app.route('/TokenServices.svc/REST/tokenize', methods=['GET', 'POST'])
 def exception_time_out_toke():
-    time.sleep(40)
+    time.sleep(400)
     return 'Ai!'
 
 #detokenize
@@ -16,4 +16,4 @@ def exception_time_out_detoke():
     return 'clap!!'
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1')
+    app.run(host='0.0.0.0', port=443)
